@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --color-primario:#FF9800;
+    --color-secundario: #FFC107;
+    --tamaño-titulos: 2.5rem;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+.header__cont,
+.personajes_cont,
+.footer__cont{
+    max-width: 1280px;
+    width: 80%;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* --------------header---------------- */
+.header{
+    background: linear-gradient(319deg, rgba(2,0,36,1) 0%, rgba(241,196,102,1) 100%);
+    height: 100vh;
+}
+
+.header__cont{
+    background-image: url(images/803d_fondo3.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 60%;
+
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding-top: 6vh;
+}
+
+.header__menu{
+    margin-bottom: 70px;
+    width: 100%;
+}
+
+.header__menu-contenedor{
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.2) 50%, rgba(0,0,0,0));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 5%;
+}
+
+.header__menu-enlaces{
+    color: var(--color-secundario);
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.header__menu-logo{
+    width: 100px;
+    margin: 0 20px;
+    transition: all 300ms;
+    z-index: 1;
+    filter: drop-shadow(0 0 0 rgba(0,0,0,0.4));
+    animation: pulso 1.5s infinite;
+    
+}
+
+@keyframes pulso{
+    0%{
+        filter: drop-shadow(0 0 5px rgba(0,0,0,0.1));
+    }
+    35%{
+        filter: drop-shadow(0 0 10px rgba(0,0,0,0.6));
+    }
+    70%{
+        filter: drop-shadow(0 0 20px rgba(0,0,0,0.1));
+    }
+    100%{
+        filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+    }
+}
+
+.header__menu-contenedor:hover .header__menu-logo{
+    transform: rotate(360deg);
+}
+
+.header__menu-enlaces{
+    opacity: 0;
+    transition: all 750ms;
+    font-style: italic;
+}
+
+.header__menu-enlaces-cont{
+    transform: translateX(-150px);
+}
+
+.header__menu-enlaces-pers{
+    transform: translateX(150px);
+}
+
+.header__menu-contenedor:hover .header__menu-enlaces-cont{
+    opacity: 1;
+    transform: translateX(0);
+    font-style: normal;
+}
+
+.header__menu-contenedor:hover .header__menu-enlaces-pers{
+    opacity: 1;
+    transform: translateX(0);
+    font-style: normal;
+}
+
+.header__menu-contenedor:hover .header__menu-enlaces-pers{
+    opacity: 1;
+}
+
+.header__caratula{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0));
+}
+
+.header__caratula-titulo{
+    color: #fff;
+    font-size: var(--tamaño-titulos);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header__caratula-texto{
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 60%;
+}
+
+.header__caratula-texto--803d{
+    font-weight: 600;
+    color: var(--color-secundario);
+}
+
+.header__btn-up{
+    background-color: #ff990021;
+    padding: 5px; 
+    border-radius: 5px;
+    border: 1px solid var(--color-primario);
+
+    position: fixed;       
+    bottom: 30px;
+    right: 30px;
+}
+
+.header__btn-up-flecha{
+    width: 40px;
+}
+
+/* --------------personajes---------------- */
+
+.personajes{
+    background-color: #333;
+    padding-top: 20px;
+    padding-bottom: 90px;
+    text-align: center;
+}
+
+.personajes_titulo{
+    color: #fff;
+    font-size: var(--tamaño-titulos);
+}
+
+.personajes_cont{
+    height: 100%;
+    background-image: url(images/wire3.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 40%;
+}
+
+.personajes__imagen-y-descripcion{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 25px;
+}
+
+.personajes__imagen{
+    width: 50%;
+}
+
+.personajes__imagen-1{
+    width: 100%;
+    margin-top: 20px;
+    object-fit: fill;
+    /* border: 4px solid var(--color-primario); */
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #000;
+}
+
+.personajes__descripcion{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+    width: 60%;
+    text-align: left;
+    color: #fff;
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5) 50%, rgba(0,0,0,0));
+}
+
+.personajes__descripcion-italic{
+    font-size: 25px;
+    font-style: italic;
+    color: var(--color-secundario);
+}
+
+.personajes__descripcion-pregunta{
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--color-secundario);
+    margin-bottom: 15px;
+}
+
+.personajes__descripcion-texto{
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+
+.personajes__boton{
+    font-weight: 600;
+    margin-top: 5%;
+    display: inline-block;
+    position: relative;
+    background-color: var(--color-primario);
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline-offset: 3px;
+}
+
+.personajes__boton-enlace{
+    color: #000;
+}
+
+/* --------------footer---------------- */
+
+.footer{
+    background-color: #000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer__cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__logo{
+    width: 50px;
+}
+
+.footer__contacto{
+    width: 70%;
+}
+
+.footer__formulario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer__item{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #aaa;
+    background-color: #000;
+    border: none;
+    border-bottom: 1px solid var(--color-primario); 
+    outline: none;   
+}
+
+.footer__item:focus{
+    color: var(--color-primario);
+}
+
+.footer__item-2{
+    min-height: 100px;
+}
+
+.footer__item-4{
+    border: none;
+    padding: 3px;
+    width: 20%;
+    margin-top: 30px;
+    color: #000;
+    background-color: var(--color-primario);
+    border-radius: 5px;
+}
+
+.footer__item-4:active{
+    color: #000;
+    background-color: #905700;
+}
+
+/* ------------------RESPONSIVE-------------------- */
+
+@media (max-width: 1024px){
+    .header__caratula-texto {
+        font-size: 20px;
+    }
+
+    .personajes__descripcion-texto {
+        font-size: 14px;
+    }
+
+    .personajes__descripcion-italic {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 914px){  
+
+    .personajes__imagen-y-descripcion {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .personajes__descripcion {
+        width: 100%;
+    }
+
+    .personajes__boton {
+        margin-top: 20px;
+    }
+
+    .header__cont {
+        background-size: 98%;
+    }
+}
+
+@media (max-width: 640px){
+    :root{
+        --tamaño-titulos: 22px;
+    }
+
+    .header__cont {
+        background-size: 69%;
+    }
+
+    .header__menu-logo {
+        width: 65px;
+    }
+
+    .header__menu-contenedor{
+        height: 33px;
+        margin-bottom: 24px;
+    }
+
+    .header__menu-enlaces {
+        font-size: 18px;
+    }
+
+    .header__btn-up-flecha {
+        width: 22px;
+    }
+
+    .header__caratula-titulo {
+        font-size: var(--tamaño-titulos);
+        margin-bottom: 5px;
+    }
+
+    .header__caratula {
+        padding: 14px 0;
+    }
+
+    .header__caratula-texto {
+        font-size: 13px;
+    }
+
+    .personajes__imagen-y-descripcion {
+        padding-top: 0px;
+    }
+
+    .personajes__imagen-1 {
+        margin: 20px 0;
+    }
+
+    .personajes__descripcion-texto {
+        font-size: 13px;
+    }
+
+    .personajes__descripcion-pregunta {
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+
+    .personajes__descripcion-italic {
+        font-size: 17px;
+    }
+
+    .personajes__boton {
+        left: 0;
+        padding: 3px 15px;
+    }
+
+    .personajes {
+        padding-top: 10px;
+        padding-bottom: 28px;
+    }
+
+    .footer__item {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 360px){
+    .header__menu-contenedor {
+        margin-bottom: 61px;
+    }
+
+    .header__cont {
+        background-size: 100%;
+    }
+
+    .header__btn-up-flecha {
+        width: 22px;
+    }
+
+    .personajes__imagen {
+        width: 90%;
+    }
+
+    .personajes__descripcion-texto {
+        line-height: 20px;
+    }
+
+    .personajes__boton {
+        left: 0;
+    }
+
+    .footer__item {
+        font-size: 15px;
+    }
+
+    .footer__item-4 {
+        width: 40%;
+    }
+}
+
+
+
