@@ -30,6 +30,38 @@ li{
     list-style: none;
 }
 
+/* --------------Inicio---------------- */
+
+/* +++++++++++++++ */
+/*   ++loader++    */
+/* +++++++++++++++ */
+
+.contenedor-loader{
+    background-color: #555;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    width: 70px;
+    height: 70px;
+    animation: giroLoader 1s linear infinite;
+}
+
+.loader img{
+    width: 100%;
+}
+
+@keyframes giroLoader{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
 /* --------------header---------------- */
 .header{
     background: linear-gradient(319deg, rgba(2,0,36,1) 0%, rgba(241,196,102,1) 100%);
